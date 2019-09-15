@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "process.h"
+#include "linux_parser.h"
 
 using std::string;
 using std::to_string;
@@ -14,7 +15,7 @@ using std::vector;
 int Process::Pid() { return pid_; }
 
 // Return this process's CPU utilization
-float Process::CpuUtilization() const {
+float Process::CpuUtilization() {
     string line;
     string value;
     float result;
